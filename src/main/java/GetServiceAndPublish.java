@@ -46,6 +46,7 @@ public class GetServiceAndPublish {
         // Ask for user input of a topic to subscribe and publish to
         System.out.println("What message would you like to publish?");
         String chosen_message = in.next();
+        chosen_message += in.nextLine();
 
         // Message that will be sent to from the publisher to the consumers subscribed to the topic above
         publisher.sendMessage(chosen_message);

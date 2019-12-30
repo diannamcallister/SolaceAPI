@@ -29,7 +29,8 @@ public class SolaceAPI {
         connection.setRequestMethod("GET");
 
         connection.setRequestProperty("Content-Type", "application/json");
-        // Set a specified API Token to access specific services
+
+        // INSERT YOUR API TOKEN BELOW
         connection.setRequestProperty("Authorization", "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzUxMiJ9.eyJzdWIiOiIyNDRnN25jMGdzMDkiLCJpbm5lclRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKRlV6VXhNaUo5LmV5SnZjbWNpT2lJeU5EUm5OMjVqTUdkeWVuQWlMQ0pqY21WaGRHVmtJam94TlRjM01USTJNRE13TmpVNUxDSmxiV0ZwYkNJNkltUnBZVzV1WVM1dFkyRnNiR2x6ZEdWeVFHMWhhV3d1ZFhSdmNtOXVkRzh1WTJFaUxDSndaWEp0YVhOemFXOXVjeUk2V3lKcFlXMWZkWE5sY25NNloyVjBJaXdpYzJWeWRtbGpaWE02WjJWME9uTmxiR1lpTENKelpYSjJhV05sYzE5eVpYRjFaWE4wY3pwblpYUWlMQ0p6WlhKMmFXTmxYM0psY1hWbGMzUnpPbkJ2YzNRNlkyeHBaVzUwWDNCeWIyWnBiR1VpTENKcFlXMWZiM0puWDNKdmJHVnpPbWRsZENJc0luTmxjblpwWTJWek9uQnZjM1FpTENKelpYSjJhV05sY3pwa1pXeGxkR1U2YzJWc1ppSXNJbk5sY25acFkyVnpPbWRsZENKZGZRLmFFMDVtdWNoSVYtWVBwTWtEWjUxbXBHM05uUjFmRXZKNXBsM1FFMUVQV2siLCJhcGlUb2tlbklkIjoiMjVzNmRmcmJrenFkIiwiaWF0IjoxNTc3MTI2MDMwfQ.aKh-M3JMGj1wSH3QeWAzdwxqQOVQPzNLPX89xz48hBk");
 
         StringBuilder content;
