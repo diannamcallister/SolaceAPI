@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.solacesystems:sol-jms:10.2.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.solacesystems/sol-jms/10.2.1/6542850d973ff186920e49345f7a21b72e3402e8/sol-jms-10.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.solacesystems/sol-jms/10.2.1/971c8c3b019cb51ae68275a79599fb29676ccf31/sol-jms-10.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

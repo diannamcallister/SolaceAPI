@@ -10,12 +10,22 @@ import com.solacesystems.jms.SolConnectionFactory;
 import com.solacesystems.jms.SolJmsUtility;
 
 public class Publisher {
+    /**
+     * A Publisher class that can publish to certain messages to certain topics.
+     */
 
     Session session;
     Topic topic;
     MessageProducer messageProducer;
 
     Publisher(ConnectionData connectionData, String topicString) throws Exception {
+        /**
+         * Constructor that creates an instance of the Publisher class
+         *
+         * @param connectionData contains the necessary information to connect the publisher to the chosen broker
+         * @param topicString is the topic that the publisher will publish to
+         *
+         */
 
         System.out.printf("TopicPublisher is connecting to Solace messaging at %s...%n", connectionData.getHost());
 
@@ -44,6 +54,11 @@ public class Publisher {
     }
 
     public void sendMessage(String messageString) throws Exception {
+        /**
+         * Publishes a message to a specific topic
+         *
+         * @param messageString the message that will be published to the specific topic
+         */
 
         // Create the message
         TextMessage message = this.session.createTextMessage(messageString);
@@ -54,14 +69,6 @@ public class Publisher {
         // NOTE: JMS Message Priority is not supported by the Solace Message Bus
         this.messageProducer.send(this.topic, message, DeliveryMode.PERSISTENT,
                 Message.DEFAULT_PRIORITY, Message.DEFAULT_TIME_TO_LIVE);
-
-        // Close everything in the order reversed from the opening order
-        // NOTE: as the interfaces below extend AutoCloseable,
-        // with them it's possible to use the "try-with-resources" Java statement
-        // see details at https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
-        //messageProducer.close();
-        //session.close();
-        //connection.close();
     }
 
 }

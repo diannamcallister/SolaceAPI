@@ -1,5 +1,3 @@
-//package com.solace.samples;
-
 import java.util.concurrent.CountDownLatch;
 
 import javax.jms.*;
@@ -8,6 +6,9 @@ import com.solacesystems.jms.SolConnectionFactory;
 import com.solacesystems.jms.SolJmsUtility;
 
 public class Subscriber {
+    /**
+     * A Subscriber class that can subscribe to certain topics and consume messages from a specific broker.
+     */
 
     Session session;
     Topic topic;
@@ -16,6 +17,13 @@ public class Subscriber {
     final CountDownLatch latch = new CountDownLatch(1);
 
     Subscriber(ConnectionData connectionData, String topicString) throws Exception {
+        /**
+         * Constructor that creates an instance of the Subscriber class
+         *
+         * @param connectionData contains the necessary information to connect the subscriber to the chosen broker
+         * @param topicString is the topic that the subscriber will subscribe to
+         *
+         */
 
         System.out.printf("TopicSubscriber is connecting to Solace messaging at %s...%n", connectionData.getHost());
 
@@ -63,17 +71,6 @@ public class Subscriber {
         // Start receiving messages
         connection.start();
         System.out.println("Awaiting message...");
-        // the main thread blocks at the next statement until a message received
-        //latch.await();
-
-        //connection.stop();
-        // Close everything in the order reversed from the opening order
-        // NOTE: as the interfaces below extend AutoCloseable,
-        // with them it's possible to use the "try-with-resources" Java statement
-        // see details at https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
-        //messageConsumer.close();
-        //session.close();
-        //connection.close();
 
     }
 
