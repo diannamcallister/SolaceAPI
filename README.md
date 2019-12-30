@@ -17,5 +17,6 @@ An brief overview of my program is depicted by the following diagram and steps d
 8. The subscriber consumes the message from the broker for the topic it is subscribed to.
 
 ## Usage
-1. In SolaceAPI class, change the API Token to the one for your Solace Cloud Account in the line under the comment: ```// INSERT YOUR API TOKEN BELOW```
+1. In SolaceAPI class, change the API Token to the one for your Solace Cloud Account in the line under the comment: 
+```// INSERT YOUR API TOKEN BELOW```
 2. Run the program from the GetServiceAndPublish class.
