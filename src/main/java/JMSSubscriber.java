@@ -5,9 +5,9 @@ import javax.jms.*;
 import com.solacesystems.jms.SolConnectionFactory;
 import com.solacesystems.jms.SolJmsUtility;
 
-public class Subscriber {
+public class JMSSubscriber {
     /**
-     * A Subscriber class that can subscribe to certain topics and consume messages from a specific broker.
+     * A JMS Subscriber class that can subscribe to certain topics and consume messages from a specific broker.
      */
 
     Session session;
@@ -16,7 +16,7 @@ public class Subscriber {
     // Latch used for synchronizing between threads
     final CountDownLatch latch = new CountDownLatch(1);
 
-    Subscriber(ConnectionData connectionData, String topicString) throws Exception {
+    JMSSubscriber(ConnectionData connectionData, String topicString) throws Exception {
         /**
          * Constructor that creates an instance of the Subscriber class
          *

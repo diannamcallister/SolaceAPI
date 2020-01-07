@@ -2,13 +2,13 @@ import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
-public class GetServiceAndPublish {
+public class JMSGetServiceAndPublish {
 
     /**
      * Overarching class that is used to get all services of a specified API Token, allow a user to choose a specific
      * service, instantiate a publisher and subscriber, allow the user to choose a specific topic and message, and
      * publish the message the specified topic with the publisher, then subscribers subscribed to the topic will
-     * consume the message.
+     * consume the message. This is the class associated with JMS Subscriber and Publisher.
      */
 
     public static void main(String... args) throws Exception {
@@ -40,8 +40,8 @@ public class GetServiceAndPublish {
         String chosen_topic = in.next();
 
         // Create instances of both the subscriber and publisher that will each connect to the service broker
-        Subscriber subscriber = new Subscriber(service_data, chosen_topic);
-        Publisher publisher = new Publisher(service_data, chosen_topic);
+        JMSSubscriber subscriber = new JMSSubscriber(service_data, chosen_topic);
+        JMSPublisher publisher = new JMSPublisher(service_data, chosen_topic);
 
         // Ask for user input of a topic to subscribe and publish to
         System.out.println("What message would you like to publish?");

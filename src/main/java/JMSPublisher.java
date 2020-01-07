@@ -9,16 +9,16 @@ import javax.jms.Topic;
 import com.solacesystems.jms.SolConnectionFactory;
 import com.solacesystems.jms.SolJmsUtility;
 
-public class Publisher {
+public class JMSPublisher {
     /**
-     * A Publisher class that can publish to certain messages to certain topics.
+     * A JMS Publisher class that can publish to certain messages to certain topics.
      */
 
     Session session;
     Topic topic;
     MessageProducer messageProducer;
 
-    Publisher(ConnectionData connectionData, String topicString) throws Exception {
+    JMSPublisher(ConnectionData connectionData, String topicString) throws Exception {
         /**
          * Constructor that creates an instance of the Publisher class
          *
