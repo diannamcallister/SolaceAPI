@@ -19,4 +19,4 @@ An brief overview of my program is depicted by the following diagram and steps d
 ## Usage
 1. In SolaceAPI class, change the API Token to the one for your Solace Cloud Account in the line under the comment: 
 ```// INSERT YOUR API TOKEN BELOW```
-2. Run the program from the GetServiceAndPublish class.
+2. Run the program from either the JMSGetServiceAndPublish class or the JCSMPGetServiceAndPublish class. The JCSMPPublisher is able to work with the subscriber for the solace cloud account's Try Me! tab as well as the JCSMPSubscriber class, whereas the JMSPublisher is only able to work with the JMSSubscriber class.
